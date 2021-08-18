@@ -1,0 +1,259 @@
+#container{
+	display: grid;
+	/* grid-template-rows: auto auto auto auto auto auto; */
+	/* grid-template-rows : repeat(6,auto); */
+	grid-auto-rows: auto;
+	grid-template-columns : 1fr;
+	grid-template-areas: "H"
+						"M"
+						"I"
+						"R"
+						"A"
+						"F";
+	margin-right: 20px;		
+	
+}
+#menu{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+#header{
+	grid-area: H;
+}
+nav ul{
+	grid-area: M;
+	
+}
+#introduction{
+	grid-area: I;
+}
+
+#research{
+	
+	grid-area: R;
+}
+
+#academics{
+	grid-area: A;
+}
+#footer{
+	grid-area: F;
+}
+
+img {
+	max-width: 100%;
+}
+
+@media screen and (min-width: 400px){
+	#container{
+		display: grid;
+		grid-auto-rows: auto;
+		grid-template-columns : 1fr 1fr;
+		grid-template-areas: "H H"
+							"M M"
+							"I I"
+							"R R"
+							"A A"
+							"F F";
+	}
+	#research {
+		display: grid;
+		grid-auto-rows: auto;
+		grid-template-columns : 1fr 1fr;
+		grid-template-areas: 
+		"RH RH"
+		"R1 R2"
+		"R3 R3"
+		;
+	}
+
+	#research h2{
+		grid-area: RH;
+	}
+	#r1{
+		grid-area: R1;
+	}
+	
+	#r2{
+		grid-area: R2;
+	}
+	#r3{
+		grid-area: R3;
+	}
+
+	#academics{
+		display: grid;
+		grid-auto-rows: auto;
+		grid-template-columns : 1fr 1fr;
+		grid-template-areas: 
+		"AH AH"
+		"A1 A2"
+		"A3 A4"
+		"A5 A5"
+		;
+	}
+	#academics h2{
+		grid-area: AH;
+	}
+	#a1{
+		grid-area: A1;
+	}
+	
+	#a2{
+		grid-area: A2;
+	}
+	#a3{
+		grid-area: A3;
+	}
+	#a4{
+		grid-area: A4;
+	}
+	
+	#a5{
+		grid-area: A5;
+	}
+}
+
+@media screen and (min-width: 800px){
+	#container{
+		display: grid;
+		grid-auto-rows: auto;
+		grid-template-columns : 1fr 1fr 1fr;
+		grid-template-areas: "H H H"
+							"M M M"
+							"I I I"
+							"R R R"
+							"A A A"
+							"F F F";
+	}
+	
+	#research {
+		display: grid;
+		grid-auto-rows: auto;
+		grid-template-columns : 1fr 1fr 1fr;
+		grid-template-areas: 
+		"RH RH RH"
+		"R1 R2 R3"
+		;
+	}
+
+	#research h2{
+		grid-area: RH;
+	}
+	#r1{
+		grid-area: R1;
+	}
+	
+	#r2{
+		grid-area: R2;
+	}
+	#r3{
+		grid-area: R3;
+	}
+
+
+	#academics{
+		display: grid;
+		grid-auto-rows: auto;
+		grid-template-columns : 1fr 1fr 1fr;
+		grid-template-areas: 
+		"AH AH AH"
+		"A1 A1 A3"
+		"A2 A4 A5"
+		;
+	}
+	#h{
+		grid-area: AH;
+	}
+	#a1{
+		grid-area: A1;
+	}
+	
+	#a2{
+		grid-area: A2;
+	}
+	#a3{
+		grid-area: A3;
+	}
+	#a4{
+		grid-area: A4;
+	}
+	
+	#a5{
+		grid-area: A5;
+	}
+	
+}
+
+@media print{
+	#container{
+		display: grid;
+		grid-auto-rows: auto;
+		grid-template-columns : 1fr 1fr 1fr;
+		grid-template-areas: "H H H"
+							"M M M"
+							"I I I"
+							"R R R"
+							"A A A"
+							"F F F";
+	}
+	#research {
+		display: grid;
+		grid-auto-rows: auto;
+		grid-template-columns : 1fr 1fr 1fr;
+		grid-template-areas: 
+		"RH RH RH"
+		"R1 R2 R3"
+		;
+	}
+
+	#research h2{
+		grid-area: RH;
+	}
+	#r1{
+		grid-area: R1;
+	}
+	
+	#r2{
+		grid-area: R2;
+	}
+	#r3{
+		grid-area: R3;
+	}
+
+
+	#academics{
+		display: grid;
+		grid-auto-rows: auto;
+		grid-template-columns : 1fr 1fr 1fr;
+		grid-template-areas: 
+		"AH AH AH"
+		"A1 A1 A3"
+		"A2 A4 A5"
+		;
+	}
+	#h{
+		grid-area: AH;
+	}
+	#a1{
+		grid-area: A1;
+	}
+	
+	#a2{
+		grid-area: A2;
+	}
+	#a3{
+		grid-area: A3;
+	}
+	#a4{
+		grid-area: A4;
+	}
+	
+	#a5{
+		grid-area: A5;
+	}
+	img, nav, #footer{
+		display: none;
+	}
+}
